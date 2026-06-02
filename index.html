@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مصنع الرحمة | لإنتاج السمن وتعبئة الزيوت الغذائية</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#114232', // أخضر داكن أنيق
+                        brandGold: '#F7C566', // أصفر ذهبي
+                        brandLight: '#F9F9F9', // أبيض/رمادي فاتح للخلفيات
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            /* صورة خلفية مؤقتة تعبر عن الزيوت والإنتاج الغذائي مع غطاء لوني (Overlay) داكن لتوضيح النص */
+            background-image: linear-gradient(rgba(17, 66, 50, 0.85), rgba(17, 66, 50, 0.85)), url('https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .product-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-brandLight antialiased">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center gap-2">
+                        <div class="w-10 h-10 bg-brandGold rounded-full flex items-center justify-center text-brandGreen font-bold text-xl shadow-lg">
+                            ر
+                        </div>
+                        <span class="font-bold text-2xl text-brandGreen">مصنع الرحمة</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                    <a href="#hero" class="text-gray-600 hover:text-brandGold transition font-semibold">الرئيسية</a>
+                    <a href="#about" class="text-gray-600 hover:text-brandGold transition font-semibold">من نحن</a>
+                    <a href="#products" class="text-gray-600 hover:text-brandGold transition font-semibold">منتجاتنا</a>
+                    <a href="#contact" class="text-gray-600 hover:text-brandGold transition font-semibold">اتصل بنا</a>
+                    <a href="https://wa.me/201xxxxxxxxx" target="_blank" class="bg-brandGold text-brandGreen px-5 py-2 rounded-lg font-bold hover:bg-yellow-400 transition shadow-md">
+                        اطلب الآن
+                    </a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-brandGreen focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#hero" class="block px-3 py-2 text-gray-800 font-semibold hover:bg-brandLight hover:text-brandGold rounded-md">الرئيسية</a>
+                <a href="#about" class="block px-3 py-2 text-gray-800 font-semibold hover:bg-brandLight hover:text-brandGold rounded-md">من نحن</a>
+                <a href="#products" class="block px-3 py-2 text-gray-800 font-semibold hover:bg-brandLight hover:text-brandGold rounded-md">منتجاتنا</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-800 font-semibold hover:bg-brandLight hover:text-brandGold rounded-md">اتصل بنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl mb-6">
+                أصالة المذاق في <span class="text-brandGold">جوهرة المائدة</span>
+            </h1>
+            <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 mb-10 leading-relaxed">
+                مصنع الرحمة، رواد إنتاج السمن النباتي الفاخر وتعبئة الزيوت الغذائية. نلبي احتياجات السوق المصري وتجار الجملة بأعلى معايير الجودة العالمية وأفضل الأسعار.
+            </p>
+            <div class="mt-5 flex justify-center gap-4">
+                <a href="#contact" class="rounded-lg shadow-lg px-8 py-3 bg-brandGold text-brandGreen font-bold text-lg hover:bg-yellow-400 transition duration-300 transform hover:-translate-y-1">
+                    تواصل معنا
+                </a>
+                <a href="#products" class="rounded-lg shadow px-8 py-3 bg-transparent border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-brandGreen transition duration-300 transform hover:-translate-y-1">
+                    تصفح منتجاتنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-10 lg:mb-0">
+                    <img src="https://images.unsplash.com/photo-1574316071802-0d684efa7aa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="صورة داخلية لعمليات الإنتاج" class="rounded-2xl shadow-xl w-full object-cover h-96">
+                </div>
+                <div>
+                    <h2 class="text-base text-brandGold font-semibold tracking-wide uppercase">عن المصنع</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brandGreen sm:text-4xl">
+                        الجودة هي معيارنا الأول
+                    </p>
+                    <p class="mt-4 max-w-2xl text-lg text-gray-600 leading-relaxed">
+                        يقع مصنع الرحمة في محافظة الشرقية (مركز أبو كبير - قرية هربيط)، ونعتز بكوننا أحد المصانع الرائدة في إنتاج السمن النباتي عالي الجودة وتعبئة أصفى الزيوت الغذائية (مثل زيوت الأولين وغيرها).
+                    </p>
+                    <p class="mt-4 max-w-2xl text-lg text-gray-600 leading-relaxed">
+                        نحن لا نقدم مجرد منتجات، بل نقدم شراكة نجاح لتجار الجملة والموزعين في جميع أنحاء مصر، معتمدين على أحدث خطوط الإنتاج والالتزام الصارم بالاشتراطات الصحية لضمان وصول "جوهرة المائدة" إلى كل بيت مصري بأفضل صورة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 bg-brandLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-brandGold font-semibold tracking-wide uppercase">خط الإنتاج</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brandGreen sm:text-4xl">
+                    منتجات جوهرة المائدة
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-64 bg-gray-200 overflow-hidden relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-brandGreen/5">
+                            <span class="font-bold text-xl">صورة عبوة 5 كيلو</span>
+                        </div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold text-brandGreen mb-3">سمن جوهرة المائدة - 5 كجم</h3>
+                        <p class="text-gray-600 mb-6">
+                            الخيار المثالي للاستخدام التجاري المتوسط والمطاعم. يمنح أطباقك نكهة غنية ومميزة مع جودة تدوم طويلاً، معبأ بأعلى معايير الأمان لحفظ المذاق الأصلي.
+                        </p>
+                        <a href="#contact" class="inline-block text-brandGold font-bold hover:text-yellow-600 border-b-2 border-brandGold pb-1">
+                            اطلب كميات الجملة &larr;
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-64 bg-gray-200 overflow-hidden relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-brandGold/10">
+                            <span class="font-bold text-xl">صورة عبوة 11 كيلو</span>
+                        </div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold text-brandGreen mb-3">سمن جوهرة المائدة - 11 كجم</h3>
+                        <p class="text-gray-600 mb-6">
+                            الحجم الاقتصادي المصمم خصيصاً لتجار الجملة وكبار الموزعين. يوفر لك أقصى توفير مع ضمان الجودة الفائقة التي تلبي طلبات السوق المستمرة.
+                        </p>
+                        <a href="#contact" class="inline-block text-brandGold font-bold hover:text-yellow-600 border-b-2 border-brandGold pb-1">
+                            اطلب كميات الجملة &larr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brandGreen sm:text-4xl">
+                    لماذا يثق بنا شركاؤنا؟
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brandLight p-8 rounded-xl text-center hover:bg-brandGreen hover:text-white transition-colors duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-brandGold rounded-full flex items-center justify-center mb-6 shadow-md">
+                        <svg class="w-8 h-8 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brandGreen group-hover:text-brandGold mb-3 transition-colors">جودة ممتازة</h3>
+                    <p class="text-gray-600 group-hover:text-gray-200 transition-colors">
+                        نستخدم أنقى الزيوت والخامات الخاضعة لرقابة صارمة، لضمان إنتاج سمن نباتي صحي ذو رائحة ومذاق لا يُضاهى.
+                    </p>
+                </div>
+
+                <div class="bg-brandLight p-8 rounded-xl text-center hover:bg-brandGreen hover:text-white transition-colors duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-brandGold rounded-full flex items-center justify-center mb-6 shadow-md">
+                        <svg class="w-8 h-8 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brandGreen group-hover:text-brandGold mb-3 transition-colors">أسعار تنافسية</h3>
+                    <p class="text-gray-600 group-hover:text-gray-200 transition-colors">
+                        نوفر أسعار جملة مدروسة بعناية لتعظيم هامش الربح لشركائنا من التجار والموزعين في السوق المصري.
+                    </p>
+                </div>
+
+                <div class="bg-brandLight p-8 rounded-xl text-center hover:bg-brandGreen hover:text-white transition-colors duration-300 group">
+                    <div class="w-16 h-16 mx-auto bg-brandGold rounded-full flex items-center justify-center mb-6 shadow-md">
+                        <svg class="w-8 h-8 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brandGreen group-hover:text-brandGold mb-3 transition-colors">توزيع موثوق وسريع</h3>
+                    <p class="text-gray-600 group-hover:text-gray-200 transition-colors">
+                        نلتزم التزاماً تاماً بمواعيد التسليم وتلبية الطلبيات الكبيرة لضمان استمرارية عملائنا دون توقف.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brandGreen text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-brandGold mb-6">مصنع الرحمة</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        الخيار الأول لتجار الجملة في مصر للحصول على أفضل جودة من السمن النباتي والزيوت الغذائية.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-6 h-6 text-brandGold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            محافظة الشرقية، مركز أبو كبير، قرية هربيط، مصر
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-6 h-6 text-brandGold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            info@alrahma-factory.com (تجريبي)
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/10 p-8 rounded-xl flex flex-col justify-center items-center text-center">
+                    <h4 class="text-xl font-bold mb-4">هل ترغب في طلب كمية أو الاستفسار عن أسعار الجملة؟</h4>
+                    <p class="text-gray-300 mb-8">نحن متواجدون على واتساب لخدمتك والرد على استفساراتك التجارية فوراً.</p>
+                    
+                    <a href="https://wa.me/201000000000" target="_blank" class="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg transform hover:scale-105">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        تواصل عبر واتساب
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-brandGreen/50 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 مصنع الرحمة - جوهرة المائدة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // إخفاء القائمة عند الضغط على أي رابط بداخلها
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
